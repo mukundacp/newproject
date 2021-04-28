@@ -3,7 +3,7 @@ class Node{
         this.data = data;
         this.left=null;
         this.right=null;        
-        this.center=null;
+        this.center=null;        
     }    
 }
 
@@ -18,7 +18,13 @@ class LinkedList{
             this.root = node;
             return;
         }
-
+    }
+    printNode(){
+        let pnode = this.root;
+        while(pnode.data){
+            console.log(pnode.data);
+            pnode = pnode.center;
+        }
     }
 }
 const ll = new LinkedList();
